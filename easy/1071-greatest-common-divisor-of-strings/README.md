@@ -1,4 +1,4 @@
-# 🧮 Greatest Common Divisor of Strings
+# 🧮 1071. Greatest Common Divisor of Strings
 
 <img width="738" alt="Screenshot 2025-01-04 at 1 28 03 PM" src="https://github.com/user-attachments/assets/514d0eb2-9b12-4e08-8241-c3a9c297c852" />
 
