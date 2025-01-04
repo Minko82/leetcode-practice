@@ -3,7 +3,7 @@
 ##  📝 Problem Statement:
 Given two strings `str1` and `str2`, return the largest string `X` such that:
 - `X` is a divisor of both `str1` and `str2`.
-- That is, `str1 = X * n` and `str2 = X * m` for some positive integers `n` and `m`.
+
 
 <br>
 
@@ -25,42 +25,64 @@ Given two strings `str1` and `str2`, return the largest string `X` such that:
 
 ## 🧠 Solution Explanation
 
-The goal of the solution is to find the **greatest common divisor (GCD)** of two strings, meaning the largest string that can evenly divide both strings.
-
-### How it Works:
-
 1. **Find the Shorter String**:
-   We start by identifying the shorter string between the two inputs since the GCD cannot be longer than the shorter string.
 
-2. **Try Possible Divisors**:
-   Starting from the full shorter string, we test every possible substring (from longest to shortest) as a potential divisor.
+   Because the GCD cannot be longer than the shorter string.
 
-3. **Check if the Divisor Works**:
+3. **Try Possible Divisors**:
+
+    Starting from the full shorter string, test every possible substring (from longest to shortest) as a potential divisor.
+
+5. **Check if the Divisor Works**:
    
    For each potential divisor:
    - Calculate how many times the divisor would need to repeat to form `str1` and `str2`.
    - Check if repeating the divisor the required number of times equals `str1` and `str2`.
 
-5. **Return the First Match**:
+6. **Return the First Match**:
+   
    As soon as we find a divisor that works for both strings, we return it. If no such divisor exists, we return an empty string (`""`).
+   
+ <br>
+ 
+   #### Example: (✿◠‿◠)
 
-### Example:
+      Input: `"ABABAB"` and `"ABAB"`
 
-Input: `"ABABAB"` and `"ABAB"`
+      - Start with `"ABAB"`, the shorter string.
+      - Check if repeating `"ABAB"` (1 time for `str2`, 1.5 times for `str1`) equals the original strings. It doesn't work.
+      - Next, try `"AB"`.
+      - Repeating `"AB"` (3 times for `str1`, 2 times for `str2`) matches both strings.
+      - Return `"AB"`.
 
-- Start with `"ABAB"`, the shorter string.
-- Check if repeating `"ABAB"` (1 time for `str2`, 1.5 times for `str1`) equals the original strings. It doesn't work.
-- Next, try `"AB"`.
-- Repeating `"AB"` (3 times for `str1`, 2 times for `str2`) matches both strings.
-- Return `"AB"`.
-
-Input: `"ABABAB"` and `"ABAC"`
-
-- Start with `"ABAC"`, the shorter string.
-- Check all substrings of `"ABAC"`. None can divide both strings evenly.
-- Return `""`.
-
+<br>
 
 ---
 
+## ✨ Notes:
 
+### - String Slicing (`[:n]`)
+
+   The syntax `[:n]` is a **slice operation** in Python used to extract a portion of a string (or list, tuple, etc.). Here's how it works:
+      
+      
+   #### How `[:n]` Works:
+   When you write `[:n]`:
+         
+   - start is not specified, so Python starts at the beginning of the string (index 0).
+   - end is n, so Python stops at index n (but doesn’t include it).
+            
+      Thus, `[:n]` extracts the first n characters of the string.
+     
+       <br>
+       
+   #### Example: (✿◠‿◠)
+   Let’s say my_string = "HELLO":
+      
+         my_string[:3]
+         # Starts at index 0, stops at index 3 (excludes index 3)
+         # Result: "HEL"
+      
+         my_string[:1]
+         # Starts at index 0, stops at index 1
+         # Result: "H"
