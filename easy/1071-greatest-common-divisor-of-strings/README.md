@@ -50,13 +50,13 @@ Given two strings `str1` and `str2`, return the largest string `X` such that:
  
    #### Example: (✿◠‿◠)
 
-      Input: `"ABABAB"` and `"ABAB"`
+   Input: `"ABABAB"` and `"ABAB"`
 
-      - Start with `"ABAB"`, the shorter string.
-      - Check if repeating `"ABAB"` (1 time for `str2`, 1.5 times for `str1`) equals the original strings. It doesn't work.
-      - Next, try `"AB"`.
-      - Repeating `"AB"` (3 times for `str1`, 2 times for `str2`) matches both strings.
-      - Return `"AB"`.
+   - Start with `"ABAB"`, the shorter string.
+   - Check if repeating `"ABAB"` (1 time for `str2`, 1.5 times for `str1`) equals the original strings. It doesn't work.
+   - Next, try `"AB"`.
+   - Repeating `"AB"` (3 times for `str1`, 2 times for `str2`) matches both strings.
+   - Return `"AB"`.
 
 <br>
 
@@ -66,7 +66,7 @@ Given two strings `str1` and `str2`, return the largest string `X` such that:
 
 ### - String Slicing (`[:n]`)
 
-   The syntax `[:n]` is a **slice operation** in Python used to extract a portion of a string (or list, tuple, etc.). Here's how it works:
+      The syntax [:n] is a slice operation in Python used to extract a portion of a string (or list, tuple, etc.)
       
       
    #### **How `[:n]` Works:**
