@@ -1,5 +1,8 @@
 # 🧮 Greatest Common Divisor of Strings
 
+<img width="738" alt="Screenshot 2025-01-04 at 1 28 03 PM" src="https://github.com/user-attachments/assets/514d0eb2-9b12-4e08-8241-c3a9c297c852" />
+
+
 ##  📝 Problem Statement:
 Given two strings `str1` and `str2`, return the largest string `X` such that:
 - `X` is a divisor of both `str1` and `str2`.
@@ -66,7 +69,7 @@ Given two strings `str1` and `str2`, return the largest string `X` such that:
    The syntax `[:n]` is a **slice operation** in Python used to extract a portion of a string (or list, tuple, etc.). Here's how it works:
       
       
-   #### How `[:n]` Works:
+   #### **How `[:n]` Works:**
    When you write `[:n]`:
          
    - start is not specified, so Python starts at the beginning of the string (index 0).
