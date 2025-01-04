@@ -62,7 +62,7 @@ Given two strings `str1` and `str2`, return the largest string `X` such that:
 
 ---
 
-## ✨ Notes:
+## ✨ Notes to Self:
 
 ### - String Slicing (`[:n]`)
 
