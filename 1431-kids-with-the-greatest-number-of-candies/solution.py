@@ -2,12 +2,16 @@ from typing import List
 
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-        extra_candies_total = [candy + extraCandies for candy in candies]
-        # print (extra_candies_total)
-        max_candies = max(candies)
-        # print(max_candies)
         results = []
-        
+        # extra_candies_total = []
+        # for candy in candies:
+        #     extra_candies_total.append(candy + extraCandies)
+
+        # OR YOU CAN WRITE IT LIKE:
+        extra_candies_total = [candy + extraCandies for candy in candies]
+
+        max_candies = max(candies)
+
         for candy in extra_candies_total:
             if candy >= max_candies:
                 results.append(True)
