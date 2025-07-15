@@ -34,10 +34,23 @@ class LinkedList:
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        current = head
+        current = head 
+        previous = None
+        next_node = None
+
         while current is not None: 
-            print(current.val)
-            current = current.next
+            next_node = current.next
+            current.next = previous
+            previous = current
+            current = next_node
+    
+        # Previous has become the new current
+        
+        while previous is not None: 
+            print(previous.val)
+            previous = previous.next
+                
+        return previous
 
 
 
